@@ -12,6 +12,9 @@ if [ -e ~/.kshrc ]; then
     mv ~/.kshrc ~/.kshrc_bak
     echo "You have .kshrc in your, home, renaming it to .kshrc_bak, remember to copy your exports etc. to new .kshrc"
 fi
+if [ -d ~/.korny ]; then
+    rm -rf ~/.korny
+fi
 
 cd ~
 git clone https://github.com/DesantBucie/korny.git .korny && cd .korny
