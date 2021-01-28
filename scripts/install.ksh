@@ -4,7 +4,7 @@ if [!-x ksh] then;
     echo "No Korn Shell installed"
     exit 1
 fi
-if [-x git] then; 
+if [!-x git] then; 
     echo "Script needs git to clone repository"
     exit 2
 fi
