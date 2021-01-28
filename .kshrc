@@ -1,15 +1,10 @@
 HISTFILE="$HOME/.ksh_history"
 HISTSIZE=5000
-THEME=~/korny/themes/otto_colori
-cd ~/korny
-git pull && echo "Checking upadtes";
+~/.korny/themes/otto_colori
+cd ~/.korny
+git pull origin master && echo "Checking upadtes"
+clear
 
-export CLICOLOR=1
-export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
-export VISUAL="vim"
-export EDITOR="$VISUAL"
-export PS1 > $THEME
-#export PS1=$'\e[35;7m$($logname)\e[0m:\e[32;1m$PWD \e[0m\e[31;8m$(git branch --show-current 2> /dev/null)\e[0m\e[33;1m =>\e[0m '
 set -o emacs
 alias __A=`echo "\020"`     # up arrow = ^p = back a command
 alias __B=`echo "\016"`     # down arrow = ^n = down a command
