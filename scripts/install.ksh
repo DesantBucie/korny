@@ -4,11 +4,11 @@ if ! [ ksh ]; then
     echo "No Korn Shell installed"
     exit 1
 fi
-if ! [ git ]; then; 
+if ! [ git ]; then
     echo "Script needs git to clone repository"
     exit 2
 fi
-if [ -e ~/.kshrc ] then;
+if [ -e ~/.kshrc ]; then
     mv ~/.kshrc ~/.kshrc_bak
     echo "You have .kshrc in your, home, renaming it to .kshrc_bak, remember to copy your exports etc. to new .kshrc"
 fi

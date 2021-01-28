@@ -1,9 +1,6 @@
 HISTFILE="$HOME/.ksh_history"
 HISTSIZE=5000
 ~/.korny/themes/otto_colori
-cd ~/.korny
-git pull origin master && echo "Checking upadtes"
-clear
 
 set -o emacs
 alias __A=`echo "\020"`     # up arrow = ^p = back a command
