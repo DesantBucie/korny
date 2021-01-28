@@ -1,5 +1,5 @@
 # korny
-ksh-something like plugin or script 
+ksh-something like plugin or script
 
 ## Installation
 
