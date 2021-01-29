@@ -2,6 +2,8 @@
 
 ksh-something like plugin or script
 
+![Oh Korny](https://raw.githubusercontent.com/DesantBucie/korny/.github/screenshot2.png)
+
 ## Requirements
 
 * git
@@ -33,9 +35,12 @@ and because I quite liked pdksh on OpenBSD as I'm using as my server.
 Unfortunately ksh clones like OpenBSD will not work as it's different,
 from setting variables to sourcing files. I may look into that in the future.
 
+
 If you only used oh-my-zsh for theme and some aliases, like I did, then you
 probably find this similar and I hope faster. This still lacks history search
 completion, which I'll try to implement soon.
 
-I integrated my basic theme with git, and mercurial.
+![Really, here should be a photo](https://raw.githubusercontent.com/DesantBucie/korny/master/.github/screenshot3.png)
+
+I integrated my basic theme with git, and mercurial. But it's really crassy idea, as it just execs `git branch --current` every time you switch directory, and if it returns error, it goes to /dev/null. Not a very sophisticated idea.
 
