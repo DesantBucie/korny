@@ -9,4 +9,12 @@ Change shell to ksh if installed:
 
 `chsh -s <PATH TO KSH>`
 
-Put .kshrc into your home folder.
+Run: `ksh -c "$(curl -fsSL https://raw.githubusercontent.com/DesantBucie/korny/master/scripts/install.ksh)"`
+
+## Update
+
+Type: `korny_update`
+
+## Uninstall
+
+Type: `korny_uninstall`
