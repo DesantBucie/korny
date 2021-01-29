@@ -2,7 +2,7 @@
 
 ksh-something like plugin or script
 
-![Oh Korny](https://raw.githubusercontent.com/DesantBucie/korny/.github/screenshot2.png)
+![Oh Korny](https://raw.githubusercontent.com/DesantBucie/korny/master/.github/screenshot2.png)
 
 ## Requirements
 
