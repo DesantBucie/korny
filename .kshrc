@@ -1,6 +1,6 @@
 HISTFILE="$HOME/.ksh_history"
 HISTSIZE=5000
-~/.korny/themes/otto_colori.ksh
+. ~/.korny/themes/otto_colori.ksh
 
 set -o emacs
 alias __A=`echo "\020"`     # up arrow = ^p = back a command
