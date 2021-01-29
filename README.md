@@ -35,7 +35,6 @@ and because I quite liked pdksh on OpenBSD as I'm using as my server.
 Unfortunately ksh clones like OpenBSD will not work as it's different,
 from setting variables to sourcing files. I may look into that in the future.
 
-![I hate alt text](https://raw.githubusercontent.com/DesantBucie/korny/master/.github/screenshot.png)
 
 If you only used oh-my-zsh for theme and some aliases, like I did, then you
 probably find this similar and I hope faster. This still lacks history search
