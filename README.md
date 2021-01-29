@@ -7,7 +7,7 @@ ksh-something like plugin or script
 ## Requirements
 
 * git
-* ksh (not ksh clones like OpenBSD, bcs it won't work unfotunately.
+* ksh (not ksh clones like OpenBSD's pdksh, bcs it won't work unfotunately.
 More about that in "About" paragraph)
 
 ## Installation
