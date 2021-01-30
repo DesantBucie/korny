@@ -14,7 +14,9 @@ More about that in "About" paragraph)
 
 Change shell to ksh if installed:
 
-`which ksh` - output will be path to ksh
+`which ksh` - output will be path to ksh 
+
+If you use Linux, make sure that ksh is in /etc/shells (it can be named ksh93)
 
 `chsh -s <PATH TO KSH>`
 
