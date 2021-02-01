@@ -1,5 +1,11 @@
 cd ~/.korny
 
-git pull origin master
+git fetch origin master
 
-rm scripts/install.ksh
+if [ -f scripts/install.ksh ]; then
+    rm scripts/install.ksh 
+fi
+
+if [ -f .kshrc ]; then
+    rm .kshrc
+fi
