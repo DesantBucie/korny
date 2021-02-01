@@ -21,4 +21,5 @@ git clone https://github.com/DesantBucie/korny.git .korny && cd .korny
 
 mv .kshrc ~
 
-rm -rf ~/.korny/scripts/install.ksh
+rm  ~/.korny/scripts/install.ksh
+rm -r ~/.korny/.github
