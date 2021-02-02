@@ -1,9 +1,9 @@
 
 PS1=$'\E[35;7m$(whoami)\E[0m'
 PS1+=$':\E[32;1m${PWD##*/} \E[0m'
-PS1+=$'\E[31;8m$(git rev-parse --abbrev-ref HEAD 2> /dev/null)\E[0m'
-PS1+=$'\E[31;8m$(hg branch 2> /dev/null)\E[0m'
-PS1+=$'\E[33;1m =>\E[0m '
+PS1+=$'\E[31;8m$(git rev-parse --abbrev-ref HEAD 2> /dev/null)$([[$? == 0]] && echo -n " ")\E[0m'
+#PS1+=$'\E[31;8m$(hg branch 2> /dev/null)\E[0m'
+PS1+=$'\E[33;1m=>\E[0m '
 
 export PS1
 export CLICOLOR=1

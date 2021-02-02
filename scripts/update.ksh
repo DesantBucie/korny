@@ -1,6 +1,8 @@
 cd ~/.korny
 
-git fetch origin master
+git stash save
+git pull origin master
+git stash pop
 
 if [ -f scripts/install.ksh ]; then
     rm scripts/install.ksh 

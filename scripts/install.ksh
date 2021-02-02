@@ -1,6 +1,6 @@
 #THIS WILL CLONE REPOSITORY TO YOUR USER HOME DIRECTORY, IT ALSO CHECKS IF YOU HAVE KSH AND GIT INSTALLED.
 #If it detects your old config it will back it up;
-if ! [ ksh ]; then
+if ! [ ksh || ksh93 || kshm ]; then
     echo "No Korn Shell installed"
     exit 1
 fi

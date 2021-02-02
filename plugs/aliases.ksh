@@ -7,3 +7,5 @@ alias __H=`echo "\001"`     # home = ^a = start of line
 alias __Y=`echo "\005"`     # end = ^e = end of line
 alias ls='ls -F'
 alias l='ls -la'
+alias ..='cd ..'
+alias ~='cd ~'
