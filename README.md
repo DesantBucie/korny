@@ -13,11 +13,11 @@ ksh-something like plugin or script
 
 Change shell to ksh if installed:
 
-which ksh` - output will be path to ksh
+`which ksh` - output will be path to ksh
 
 make sure that ksh is in /etc/shells (it can be named ksh93), if there isn't, enter a path;
 
-chsh -s <PATH TO KSH>`
+`chsh -s <PATH TO KSH>`
 
 Run: `ksh -c "$(curl -fsSL https://raw.githubusercontent.com/DesantBucie/korny/master/scripts/install.ksh)"`
 
