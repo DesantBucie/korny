@@ -1,5 +1,12 @@
-HISTFILE="$HOME/.ksh_history"
+HISTFILE="$HOME/.sh_history"
 HISTSIZE=5000
-. ~/.korny/themes/otto_colori.ksh #Theme
-for f in ~/.korny/plugs/*; do source $f; done #Plugins
+PROMPT=otto_colori.ksh
+
+. ~/.korny/prompts/$PROMPT
+
+for PLUG in ~/.korny/plugs/*
+do 
+    . $PLUG
+done
+
 export PATH=$PATH":$HOME/.korny/bin"
