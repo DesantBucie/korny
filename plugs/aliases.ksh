@@ -1,11 +1,6 @@
 set -o emacs
-alias __A=`echo "\020"`     # up arrow = ^p = back a command
-alias __B=`echo "\016"`     # down arrow = ^n = down a command
-alias __C=`echo "\006"`     # right arrow = ^f = forward a character
-alias __D=`echo "\002"`     # left arrow = ^b = back a character
+## Aliases taken from https://stackoverflow.com/questions/1623256/make-arrow-and-delete-keys-work-in-kornshell-command-line  
 alias __H=`echo "\001"`     # home = ^a = start of line
 alias __Y=`echo "\005"`     # end = ^e = end of line
 alias ls='ls -F'
 alias l='ls -la'
-alias ".."='cd ..'
-alias "~"='cd ~'
