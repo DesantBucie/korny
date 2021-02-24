@@ -1,16 +1,6 @@
-PROMPT=$'\e[35;7m$(whoami)\e[0m'
-PROMPT+=$':\e[32;1m$(if [[ "$PWD" == "$HOME" ]] 
-then 
-    print -n "~ "
-elif [[ "$PWD" == "/" ]]
-then
-    print -n "/ "
-else
-    print -n "${PWD##*/} "
-fi)\e[0m'
-PROMPT+=$'\e[31;8m$(git rev-parse --abbrev-ref HEAD 2> /dev/null)$(if [ $? -eq 0 ]; then 
-    echo -n " " 
-fi)\e[0m'
+PROMPT=${bg[magenta]}$(whoami)${bg[reset]}
+PROMPT+=$':\e[32;1m$(_print_pwd)\e[0m'
+PROMPT+=$'\e[31;8m$(_git_prompt)\e[0m'
 PROMPT+=$'\e[33;1m=>\e[0m '
 PS1=$PROMPT
 export PS1

@@ -1,5 +1,5 @@
 cd ~/.korny
-
+git stash
 git pull origin master
 
 if [ -f scripts/install.ksh ]; then
