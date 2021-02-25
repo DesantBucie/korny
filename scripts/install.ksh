@@ -3,12 +3,12 @@
 if !  type ksh || type ksh93 || type kshm  
 then
     echo "No Korn Shell installed"
-    exit 1
+    exit 127
 fi
 if ! type git 
 then
     echo "Script needs git to clone repository"
-    exit 2
+    exit 127
 fi
 if [ -e ~/.kshrc ] 
 then
