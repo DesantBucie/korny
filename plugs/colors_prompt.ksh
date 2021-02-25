@@ -3,15 +3,14 @@ case $(uname) in
         cap_setfg=AF
         cap_setbg=AB
         ;;
-    Linux,Darwin,*)
+    *)
         cap_setfg=setaf
         cap_setbg=setab
         ;;
 esac
-typeset -A fg bg
-
 load_colors()
 {
+    typeset -A fg bg
     typeset color
     integer i=0
 
@@ -19,8 +18,10 @@ load_colors()
     do
         fg+=([$color]=$(tput $cap_setfg $i))
         bg+=([$color]=$(tput $cap_setbg $i))
-        (( i++ ))
+        ((i++)) 2> /dev/null
+        #why throws error?
     done
-    fg+=([reset]=$(tput $cap_setfg 9))
-    bg+=([reset]=$(tput $cap_setbg 9))
+    fg+=([reset]=$(tput $cap_setfg 7))
+    bg+=([reset]=$(tput $cap_setbg 0))
 }
+load_colors

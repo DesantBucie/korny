@@ -1,9 +1,10 @@
-PROMPT=${bg[magenta]}$(whoami)${bg[reset]}
-PROMPT+=$':\e[32;1m$(_print_pwd)\e[0m'
-PROMPT+=$'\e[31;8m$(_git_prompt)\e[0m'
-PROMPT+=$'\e[33;1m=>\e[0m '
-PS1=$PROMPT
-export PS1
+PS1.get()
+{
+.sh.value="${bg[magenta]}${fg[black]}$(whoami)${fg[reset]}${bg[reset]}:"
+.sh.value+="${fg[green]}$(_print_short_pwd)${fg[reset]}"
+.sh.value+="${fg[red]}$(_git_prompt)${fg[reset]}"
+.sh.value+="${fg[brown]}\=\> ${fg[reset]}"
+}
 export CLICOLOR=1
 
 if [ $(uname) == "Linux" ]
