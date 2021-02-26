@@ -16,8 +16,8 @@ load_colors()
 
     for color in black red green brown blue magenta cyan white 
     do
-        fg+=([$color]=$(tput $cap_setfg $i))
-        bg+=([$color]=$(tput $cap_setbg $i))
+        fg+=([$color]=$(tput $cap_setfg $i $i $i))
+        bg+=([$color]=$(tput $cap_setbg $i $i $i))
         ((i++)) 2> /dev/null
         #why throws error?
     done
