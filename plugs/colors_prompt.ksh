@@ -21,7 +21,7 @@ load_colors()
         ((i++)) 2> /dev/null
         #why throws error?
     done
-    fg+=([reset]=$(tput $cap_setfg 7))
-    bg+=([reset]=$(tput $cap_setbg 0))
+    fg+=([reset]=$(tput $cap_setfg 7 7 7))
+    bg+=([reset]=$(tput $cap_setbg 0 0 0))
 }
 load_colors
