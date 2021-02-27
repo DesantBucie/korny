@@ -1,27 +1,33 @@
 # korny
 
-ksh-something like plugin or script
+Something like plugin for kornshell
 
-![Oh Korny](https://raw.githubusercontent.com/DesantBucie/korny/master/.github/screenshot2.png)
+![Oh Korny](.github/screenshot2.png)
 
 ## Requirements
 
-* git (avoid apple crappy one, use brew's or nixes)
-* ksh (not ksh clones like OpenBSD's pdksh, compile [this](https://github.com/ksh93/ksh)).
+* git (avoid apple crappy one, use brew's or nix's)
+* ksh93 ([Best option](https://github.com/ksh93/ksh)).
 
 ## Installation
 
-Original Kornshell is buggy, [Compile this fork](https://github.com/ksh93/ksh or use precompiled versions in [releases](https://github.com/DesantBucie/korny/releases)
+Original Kornshell is buggy, you can compile one above or use precompiled versions in [releases](https://github.com/DesantBucie/korny/releases)
 
-Change shell to kornshell:
+Change default shell to kornshell:
 
 `which ksh` - output will be path to ksh
 
-make sure that ksh is in `/etc/shells` (it can be named ksh93), if there isn't, enter a path;
+Make sure that ksh is in `/etc/shells` (it can be named ksh93), if there isn't, enter a path;
 
 `chsh -s <PATH TO KSH>`
 
 Run: `ksh -c "$(curl -fsSL https://raw.githubusercontent.com/DesantBucie/korny/master/scripts/install.ksh)"`
+
+### OpenBSD
+ 
+In OpenBSD you have to change `local` to `typeset` in /etc/ksh.kshrc, use vim or any other editor, and just search.
+
+![O-BSD](.github/screenshot6.png)
 
 ## Update
 
@@ -33,15 +39,19 @@ Type: `korny_uninstall`
 
 ## About
 
-If you only used oh-my-zsh for theme and some aliases, like I did, then you
-probably find this similar and I hope faster. 
+If you only used ohmyzsh for theme and aliases, like I did, then you
+probably find this similar and maybe faster. 
 
-![Really, here should be a photo](https://raw.githubusercontent.com/DesantBucie/korny/master/.github/screenshot3.png)
+![I hate alt text](.github/screenshot3.png)
 
 I integrated my basic theme with git. If you access via ssh, you will get different color.
-![ssh](https://raw.githubusercontent.com/DesantBucie/korny/master/.github/screenshot5.png)
+
+![ssh](.github/screenshot5.png)
 
 ## Why should I use it instead of zsh?
 
 I think in most situations it's going to be quicker. For example look at that times i measured.
+
 ![Yesyesyes](.github/screenshot4.png)
+
+And it's definetly quicker than bash, and you shouldn't see many differences in terms of everyday using.
