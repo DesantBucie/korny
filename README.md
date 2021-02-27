@@ -11,7 +11,7 @@ ksh-something like plugin or script
 
 ## Installation
 
-Original Kornshell is buggy, [Compile this fork](https://github.com/ksh93/ksh or use precompiled versions in [releases](https://github.com/DesantBucie/korny/releases)
+Original Kornshell is buggy, you can use it, but better [Compile this fork](https://github.com/ksh93/ksh) or use precompiled versions in [releases](https://github.com/DesantBucie/korny/releases)
 
 Change shell to kornshell:
 
@@ -22,6 +22,10 @@ make sure that ksh is in `/etc/shells` (it can be named ksh93), if there isn't, 
 `chsh -s <PATH TO KSH>`
 
 Run: `ksh -c "$(curl -fsSL https://raw.githubusercontent.com/DesantBucie/korny/master/scripts/install.ksh)"`
+
+### OPENBSD
+ 
+In OpenBSD you have to change `local` to `typeset` in /etc/ksh.kshrc, use vim or any other editor, and just search.
 
 ## Update
 
