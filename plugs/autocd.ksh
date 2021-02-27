@@ -2,8 +2,7 @@
 _do_autocd()
 {
         if      (($#==1)) && ! command -v "$1" >/dev/null && [[ -d $1 ]]
-        then    printf 'cd -- %q\n' "$1" >&2
-                CDPATH= command cd -- "$1"
+        then	CDPATH= command cd -- "$1"
                 return 2
         fi
 }

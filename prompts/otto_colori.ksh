@@ -1,6 +1,6 @@
 PS1.get()
 {
-	if [ ${SSH_TTY} == $(tty) ]
+	if ! [[ ${SSH_TTY} == $(tty) ]]; then
 		.sh.value="${bg[magenta]}${fg[black]}$(whoami)${fg[reset]}${bg[reset]}:"
 	else
 		.sh.value="${bg[cyan]}${fg[black]}$(whoami)@ssh${fg[reset]}${bg[reset]}:"
