@@ -6,16 +6,18 @@ ksh-something like plugin or script
 
 ## Requirements
 
-* git
-* ksh (not ksh clones like OpenBSD's pdksh, you can compile [this](https://github.com/ksh93/ksh), and it'll work, read more in OPENBSD.md).
+* git (avoid apple crappy one, use brew's or nixes)
+* ksh (not ksh clones like OpenBSD's pdksh, compile [this](https://github.com/ksh93/ksh)).
 
 ## Installation
 
-Change shell to ksh if installed:
+Original Kornshell is buggy, [Compile this fork](https://github.com/ksh93/ksh or use precompiled versions in [releases](https://github.com/DesantBucie/korny/releases)
+
+Change shell to kornshell:
 
 `which ksh` - output will be path to ksh
 
-make sure that ksh is in /etc/shells (it can be named ksh93), if there isn't, enter a path;
+make sure that ksh is in `/etc/shells` (it can be named ksh93), if there isn't, enter a path;
 
 `chsh -s <PATH TO KSH>`
 
@@ -32,12 +34,12 @@ Type: `korny_uninstall`
 ## About
 
 If you only used oh-my-zsh for theme and some aliases, like I did, then you
-probably find this similar and I hope faster. This still lacks history search
-completion, which I'll try to implement soon.
+probably find this similar and I hope faster. 
 
 ![Really, here should be a photo](https://raw.githubusercontent.com/DesantBucie/korny/master/.github/screenshot3.png)
 
-I integrated my basic theme with git, and mercurial. But it's really crassy idea, as it just execs `git branch --show-current` every time you switch directory, and if it returns error, it goes to /dev/null. Not a very sophisticated idea.
+I integrated my basic theme with git. If you access via ssh, you will get different color.
+![ssh](https://raw.githubusercontent.com/DesantBucie/korny/master/.github/screenshot5.png)
 
 ## Why should I use it instead of zsh?
 

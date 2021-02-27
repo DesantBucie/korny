@@ -18,8 +18,7 @@ load_colors()
     do
         fg+=([$color]=$(tput $cap_setfg $i $i $i))
         bg+=([$color]=$(tput $cap_setbg $i $i $i))
-        ((i++)) 2> /dev/null
-        #why throws error?
+        ((i++))
     done
     fg+=([reset]=$(tput $cap_setfg 7 7 7))
     bg+=([reset]=$(tput $cap_setbg 0 0 0))
