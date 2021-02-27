@@ -2,7 +2,7 @@
 
 Something like plugin for kornshell
 
-![Oh Korny](https://raw.githubusercontent.com/DesantBucie/korny/master/.github/screenshot2.png)
+![Oh Korny](.github/screenshot2.png)
 
 ## Requirements
 
@@ -27,6 +27,8 @@ Run: `ksh -c "$(curl -fsSL https://raw.githubusercontent.com/DesantBucie/korny/m
  
 In OpenBSD you have to change `local` to `typeset` in /etc/ksh.kshrc, use vim or any other editor, and just search.
 
+![O-BSD](.github/screenshot6.png)
+
 ## Update
 
 Type: `korny_update`
@@ -40,11 +42,11 @@ Type: `korny_uninstall`
 If you only used ohmyzsh for theme and aliases, like I did, then you
 probably find this similar and maybe faster. 
 
-![I hate alt text](https://raw.githubusercontent.com/DesantBucie/korny/master/.github/screenshot3.png)
+![I hate alt text](.github/screenshot3.png)
 
 I integrated my basic theme with git. If you access via ssh, you will get different color.
 
-![ssh](https://raw.githubusercontent.com/DesantBucie/korny/master/.github/screenshot5.png)
+![ssh](.github/screenshot5.png)
 
 ## Why should I use it instead of zsh?
 
