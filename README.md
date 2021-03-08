@@ -7,7 +7,7 @@ Something like plugin for kornshell
 ## Requirements
 
 * git (avoid apple crappy one, use brew's or nix's)
-* ksh93 ([Best option](https://github.com/ksh93/ksh)).
+* ksh93 ([Best option](https://github.com/ksh93/ksh), pdksh or mksh won't work).
 
 ## Installation
 
@@ -28,6 +28,8 @@ Run: `ksh -c "$(curl -fsSL https://raw.githubusercontent.com/DesantBucie/korny/m
 In OpenBSD you have to change `local` to `typeset` in /etc/ksh.kshrc, use vim or any other editor, and just search.
 
 ![O-BSD](.github/screenshot6.png)
+
+You also need to set `export ENV=$HOME/.kshrc` in ~/.profile or /etc/profile
 
 ## Update
 
