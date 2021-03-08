@@ -29,6 +29,8 @@ In OpenBSD you have to change `local` to `typeset` in /etc/ksh.kshrc, use vim or
 
 ![O-BSD](.github/screenshot6.png)
 
+You also need to set `export ENV=$HOME/.kshrc` in ~/.profile or /etc/profile
+
 ## Update
 
 Type: `korny_update`
