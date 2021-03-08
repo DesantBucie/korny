@@ -1,18 +1,8 @@
 _print_short_pwd()
 {
-    if [[ "$PWD" == "$HOME" ]]; then 
-        print -n "~ "
-    elif [[ "$PWD" == "/" ]]; then
-        print -n "/ "
-    else
-        print -n "${PWD##*/} "
-    fi
+       { [[ "$PWD" == "$HOME" ]] && print -n "~ "; } || { [[ "$PWD" == "/" ]] && print -n "/ "; } || print -n "${PWD##*/} "
 }
 _print_pwd()
 {
-    if [[ "${PWD#$HOME}" != "$PWD" ]]; then
-      print -n "~${PWD#$HOME} "
-    else
-      print -n "$PWD "
-    fi
+    [[ "${PWD#$HOME}" != "$PWD" ]] && print -n "~${PWD#$HOME} " || print -n "$PWD "
 }
