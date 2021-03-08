@@ -7,7 +7,7 @@ Something like plugin for kornshell
 ## Requirements
 
 * git (avoid apple crappy one, use brew's or nix's)
-* ksh93 ([Best option](https://github.com/ksh93/ksh)).
+* ksh93 ([Best option](https://github.com/ksh93/ksh), pdksh or mksh won't work).
 
 ## Installation
 
