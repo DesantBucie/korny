@@ -3,6 +3,8 @@
 
 ! { type ksh || type ksh93; } && echo "No Korn Shell installed" && exit 127
 
+! [[ $(ksh --version) == *'u+m'* ]] && echo "Consider using ksh u+m linked in README"
+
 ! type git && echo "Script needs git to clone repository" && exit 127
 
 [[ -f ~/.kshrc ]] && mv ~/.kshrc ~/.kshrc_bak && echo "You have .kshrc in your, home, renaming it to .kshrc_bak, remember to copy your exports etc. to new .kshrc"
