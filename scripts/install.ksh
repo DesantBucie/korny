@@ -3,7 +3,7 @@
 
 ! { type ksh || type ksh93; } && echo "No Korn Shell installed" && exit 127
 
-! [[ $(ksh --version) == *'u+m'* ]] && echo "Consider using ksh u+m linked in README"
+[[ $(ksh --version) == *'u+m'* ]] || echo "Consider using ksh u+m linked in README"
 
 ! type git && echo "Script needs git to clone repository" && exit 127
 
