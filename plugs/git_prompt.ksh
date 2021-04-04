@@ -5,5 +5,6 @@ sed 's/\// /g') | cut -f1) ]|| echo ↓
 }
 _git_prompt()
 {     
-        output=$(git rev-parse --abbrev-ref HEAD 2> /dev/null) && echo $(git rev-parse --abbrev-ref HEAD)' '
+        [[ $(git rev-parse --abbrev-ref HEAD 2> /dev/null) ]] \
+		&& echo -n $(git rev-parse --abbrev-ref HEAD)' '
 }
