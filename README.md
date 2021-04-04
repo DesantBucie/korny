@@ -31,7 +31,7 @@ In OpenBSD you have to change `local` to `typeset` in /etc/ksh.kshrc, use vim or
 
 You also need to set `export ENV=$HOME/.kshrc` in ~/.profile or /etc/profile
 
-###FreeBSD
+### FreeBSD
 
 Set `export ENV=$HOME/.kshrc` in ~/.profile or /etc/profile
 
