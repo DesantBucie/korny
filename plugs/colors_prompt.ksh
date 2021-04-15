@@ -19,7 +19,7 @@ load_colors()
                 bg+=([$color]=$(tput $cap_setbg $i $i $i))
                 ((i++))
         done
-        fg+=([reset]=$(tput $cap_setfg 7 7 7))
-        bg+=([reset]=$(tput $cap_setbg 0 0 0))
+        fg+=([reset]=$(tput sgr0))
+        bg+=([reset]=$(tput sgr0))
 }
 load_colors
