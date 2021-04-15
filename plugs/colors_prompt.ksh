@@ -14,9 +14,9 @@ load_colors()
         typeset color
         integer i=0
 
-        for     color in black red green brown blue magenta cyan white 
-        do      fg+=([$color]=$(tput $cap_setfg $i $i $i))
-                bg+=([$color]=$(tput $cap_setbg $i $i $i))
+        for     color in $(seq 0 255)  
+        do      fg+=([$i]=$(tput $cap_setfg $i))
+                bg+=([$i]=$(tput $cap_setbg $i))
                 ((i++))
         done
         fg+=([reset]=$(tput sgr0))
