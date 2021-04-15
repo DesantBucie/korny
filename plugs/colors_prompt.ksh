@@ -14,7 +14,7 @@ load_colors()
         typeset color
         integer i=0
 
-        for     color in $(seq 0 255)  
+        while [[ $i -lt 255 ]]  
         do      fg+=([$i]=$(tput $cap_setfg $i))
                 bg+=([$i]=$(tput $cap_setbg $i))
                 ((i++))
