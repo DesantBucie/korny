@@ -13,10 +13,10 @@ load_colors()
         typeset -A fg bg
         typeset color
         integer i=0
-
-        while [[ $i -lt 255 ]]  
-        do      fg+=([$i]=$(tput $cap_setfg $i))
-                bg+=([$i]=$(tput $cap_setbg $i))
+        #I removed 256 colors as it was slow on some systems, you can still use it, but you have to decalre it yourself 
+        for color in black red green brown blue magenta cyan white   
+        do      fg+=([$color]=$(tput $cap_setfg $i))
+                bg+=([$color]=$(tput $cap_setbg $i))
                 ((i++))
         done
         fg+=([reset]=$(tput sgr0))
