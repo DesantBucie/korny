@@ -5,7 +5,7 @@ PS1.get()
 		&& .sh.value="${bg[magenta]}${fg[black]}$(whoami)${fg[reset]}${bg[reset]}:" || \
 		.sh.value="${bg[cyan]}${fg[black]}$(whoami)@ssh${fg[reset]}${bg[reset]}:"
 
-	.sh.value+="${fg[green]}$(_print_short_pwd)${fg[reset]}"
+	.sh.value+="${fg[green]}$(_print_short_pwd)\ ${fg[reset]}"
 	.sh.value+="${fg[red]}$(_git_prompt)${fg[reset]}"
 	.sh.value+="${fg[brown]}-\> ${fg[reset]}"
 }

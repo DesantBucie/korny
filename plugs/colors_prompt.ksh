@@ -8,6 +8,13 @@ FreeBSD)
         cap_setbg=setab
         ;;
 esac
+custom_color()
+{
+        typeset -A cfg cbg
+        cfg+=([$1]=$(tput $cap_setfg $2))
+        cbg+=([$1]=$(tput $cap_setbg $2))
+
+}
 load_colors()
 {
         typeset -A fg bg
