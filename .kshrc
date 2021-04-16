@@ -1,8 +1,8 @@
 HISTFILE="$HOME/.sh_history"
 HISTSIZE=5000
-PROMPT=otto_colori.ksh
+PROMPT=otto_colori
 
-. ~/.korny/prompts/$PROMPT
+. ~/.korny/prompts/$PROMPT.ksh
 
 for PLUG in ~/.korny/plugs/*
 do 
