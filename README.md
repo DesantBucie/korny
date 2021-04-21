@@ -9,6 +9,11 @@ Something like plugin for kornshell
 * git (avoid apple crappy one, use brew's or nix's)
 * ksh93 ([Best option](https://github.com/ksh93/ksh), pdksh or mksh won't work).
 
+## Tested OSes
+* macOS
+* SunOS
+* FreeBSD and OpenBSD
+* Should also work for linux
 ## Installation
 
 Original Kornshell is buggy, you can compile one above or use precompiled versions in [releases](https://github.com/DesantBucie/korny/releases)
