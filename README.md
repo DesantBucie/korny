@@ -26,7 +26,7 @@ Make sure that ksh is in `/etc/shells` (it can be named ksh93), if there isn't, 
 
 `chsh -s <PATH TO KSH>`
 
-Run: `ksh -c "$(curl -fsSL https://raw.githubusercontent.com/DesantBucie/korny/master/scripts/install.ksh)"`
+Run: `ksh -c "$(curl -fsSL https://raw.githubusercontent.com/DesantBucie/korny/master/bin/install.ksh)"`
 
 ### OpenBSD
  
