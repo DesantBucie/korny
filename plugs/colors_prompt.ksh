@@ -26,7 +26,7 @@ load_colors()
                 bg+=([$color]=$(tput $cap_setbg $i))
                 ((i++))
         done
-        fg+=([reset]=$(tput sgr0))
-        bg+=([reset]=$(tput sgr0))
+        fg+=([reset]=$(printf '\033[0;10m'))
+        bg+=([reset]=$(printf '\033[0;10m'))
 }
 load_colors
