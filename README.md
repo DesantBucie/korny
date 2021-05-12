@@ -66,3 +66,4 @@ I think in most situations it's going to be quicker. For example look at that ti
 ![Yesyesyes](.github/screenshot4.png)
 
 And it's definetly quicker than bash, and you shouldn't see many differences in terms of everyday using.
+![HelloSystem](.github/screenshot7.png)
