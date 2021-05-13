@@ -11,8 +11,8 @@ esac
 custom_color()
 {
         typeset -A cfg cbg
-        cfg+=([$1]=$(tput $cap_setfg $2))
-        cbg+=([$1]=$(tput $cap_setbg $2))
+        cfg+=([$1]=$(tput $cap_setfg $2 $2 $2))
+        cbg+=([$1]=$(tput $cap_setbg $2 $2 $2))
 
 }
 load_colors()
@@ -22,8 +22,8 @@ load_colors()
         integer i=0
         #I removed 256 colors as it was slow on some systems, you can still use it, but you have to decalre it yourself 
         for color in black red green brown blue magenta cyan white   
-        do      fg+=([$color]=$(tput $cap_setfg $i))
-                bg+=([$color]=$(tput $cap_setbg $i))
+        do      fg+=([$color]=$(tput $cap_setfg $i $i $i))
+                bg+=([$color]=$(tput $cap_setbg $i $i $i))
                 ((i++))
         done
         fg+=([reset]=$(printf '\033[0;10m'))
