@@ -18,9 +18,9 @@ Something like plugin for kornshell
 
 Original Kornshell is buggy, you can compile one above or use precompiled versions in [releases](https://github.com/DesantBucie/korny/releases)
 
-1. Change default shell to kornshell:
-`which ksh` - output will be path to ksh
-Make sure that ksh is in `/etc/shells` (it can be named ksh93), if there isn't, enter a path;
+1. Change default shell to kornshell:<br/>
+`which ksh` - output will be path to ksh<br/>
+Make sure that ksh is in `/etc/shells` (it can be named ksh93), if there isn't, enter a path<br/>
 `chsh -s <PATH TO KSH>`
 
 2. Run: `ksh -c "$(curl -fsSL https://raw.githubusercontent.com/DesantBucie/korny/master/bin/install.ksh)"`
