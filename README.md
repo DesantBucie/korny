@@ -40,6 +40,10 @@ You also need to set `export ENV=$HOME/.kshrc` in ~/.profile or /etc/profile
 
 Set `export ENV=$HOME/.kshrc` in ~/.profile or /etc/profile
 
+## Change prompt
+
+Change 3rd line named `PROMPT` to filename without extension i.e ibsd
+
 ## Update
 
 Type: `korny_update`
