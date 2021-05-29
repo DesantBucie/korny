@@ -42,7 +42,7 @@ Set `export ENV=$HOME/.kshrc` in ~/.profile or /etc/profile
 
 ## Change prompt
 
-Change 3rd line named `PROMPT` to filename without extension i.e ibsd
+Change 3rd line named `PROMPT` in `.kshrc` to filename without extension i.e ibsd
 
 ## Update
 
