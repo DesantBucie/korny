@@ -5,7 +5,9 @@ PS1.get()
         #This funtion provides compatibility layer between oses.
         custom_color light_brown 94
         custom_color red 196
-        .sh.value="${cfg[light_brown]}$(tput bold)[$(_print_short_pwd)]${fg[reset]}${cfg[red]} $(_git_prompt)${fg[reset]}"
+        custom_color blue 27
+        custom_color green 40
+        .sh.value="${cfg[light_brown]}$(tput bold)[$(_print_short_pwd)]${fg[reset]}${cfg[red]} $(_git_prompt)${fg[reset]}${cfg[blue]}$(_fastboot_rdy)${fg[reset]}${cfg[green]}$(_adb_rdy)${fg[reset]}"
 }
 export CLICOLOR=1
 
