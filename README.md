@@ -16,6 +16,8 @@ Something like plugin for kornshell
 * FreeBSD and OpenBSD
 * Should also work for linux
 
+![](.github/korny.png)
+
 ## Installation
 
 Original Kornshell is buggy, you can compile one above or use precompiled versions in [releases](https://github.com/DesantBucie/korny/releases)
