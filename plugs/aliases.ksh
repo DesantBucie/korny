@@ -1,4 +1,5 @@
 set -o emacs
+#Comment below if you are using old (2012) ksh93
 set --nobackslashctrl
 # Aliases taken from https://stackoverflow.com/questions/1623256/make-arrow-and-delete-keys-work-in-kornshell-command-line  
 alias __H=`echo "\001"`     # home = ^a = start of line
