@@ -29,6 +29,8 @@ Make sure that ksh is in `/etc/shells` (it can be named ksh93), if there isn't, 
 
 2. Run: `ksh -c "$(curl -fsSL https://raw.githubusercontent.com/DesantBucie/korny/master/bin/install.ksh)"`
 
+3. If you are not using the version above, then you will be told to comment 3rd line in ~/.korny/aliases.ksh, and autocd won't work.
+
 #### OpenBSD
  
 In OpenBSD you have to change `local` to `typeset` in /etc/ksh.kshrc, use vim or any other editor, and just search.
