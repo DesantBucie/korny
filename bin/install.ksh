@@ -21,4 +21,4 @@ do
     read ksh_val
     [[ $ksh_val == 'y' || $ksh_val == 'n' || $ksh_val == 'Y' || $ksh_val == 'N' ]] && break || echo '(y/n)'
 done
-[[ $ksh_val == 'n' || $ksh_val == 'N' ]] && echo 'Go to ~/.korny/plugs/aliases.ksh and comment with # third line
+[[ $ksh_val == 'n' || $ksh_val == 'N' ]] && echo 'Go to ~/.korny/plugs/aliases.ksh and comment with # third line'
