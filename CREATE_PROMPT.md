@@ -50,7 +50,7 @@ Unfortunately for now if some function does print space and you don't want it, t
 _custom_git_prompt()
 {     
         [[ $(git rev-parse --abbrev-ref HEAD 2> /dev/null) ]] \
-		&& print -n $(git rev-parse --abbrev-ref HEAD 2> /dev/null #deleted space at the end
+		&& print -n $(git rev-parse --abbrev-ref HEAD 2> /dev/null) #deleted space at the end
 }
 
 
@@ -92,7 +92,7 @@ Just to be sure, in this case `${cfg[red]}` != `${fg[red]}` as these are two dif
 
 If you thinking about yourself only, then this is not the chapter for you. But if you want to make cross-compatible prompt you have to watch out.
 
-Some of the programs like `whoami` might not be installed on someone's computer, although this must be really rare. 
+Some of the programs like `whoami` might not be installed on someone's computer. That was the case in SunOS, where i just aliased printing LOGNAME to `whoami`.
 
 Also not all systems support 256 terminal colors, so you can use basic 8. Some terminals support even RGB, but there is no support for them in korny, so you would have to code it yourself.
 
