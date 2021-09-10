@@ -10,3 +10,8 @@ alias l='ls -la'
 	&& alias sudo='doas'
 [[ $(command -v nvim) ]] \
 	&& alias vim='nvim'
+[[ $(uname) == "SunOS" ]] &&\
+	alias whoami="print $LOGNAME" &&\
+	alias ls="ls --color"
+[[ $(uname) == "OpenBSD" ]] &&\
+        alias poweroff="halt -p"
