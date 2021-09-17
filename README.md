@@ -4,6 +4,10 @@ Something like plugin for kornshell
 
 ![Oh Korny](.github/screenshot2.png)
 
+## Announcments
+
+New korny version will be installed in ~/local/share, bcs of .folders clutter in home. Users using old .kshrc, won't be affected, as .kshrc isn't updated.
+
 ## Requirements
 
 * git (avoid apple crappy one, use brew's or nix's)
@@ -14,7 +18,7 @@ Something like plugin for kornshell
 * macOS
 * SunOS
 * FreeBSD and OpenBSD
-* Should also work for linux
+* most of linuxes probably
 
 ![](.github/korny.png)
 
@@ -22,9 +26,12 @@ Something like plugin for kornshell
 
 Original Kornshell is buggy, you can compile one above or use precompiled versions in [releases](https://github.com/DesantBucie/korny/releases)
 
-1. Change default shell to kornshell:<br/>
+1. Change default shell to kornshell:
+
 `which ksh` - output will be path to ksh<br/>
-Make sure that ksh is in `/etc/shells` (it can be named ksh93), if there isn't, enter a path<br/>
+
+Make sure that ksh is in `/etc/shells` (it can be named ksh93), if there isn't, enter a path
+
 `chsh -s <PATH TO KSH>`
 
 2. Run: `ksh -c "$(curl -fsSL https://raw.githubusercontent.com/DesantBucie/korny/master/bin/install.ksh)"`

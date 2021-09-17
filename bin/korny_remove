@@ -1,6 +1,6 @@
-rm -rf ~/.korny
+rm -rf $KORNY_FOLDER
 
-rm -rf .kshrc
+rm ~/.kshrc
 
-[[ -f .kshrc_bak ]] && mv .kshrc_bak .kshrc
+[[ -f ~/.kshrc_bak ]] && mv ~/.kshrc_bak ~/.kshrc
 
