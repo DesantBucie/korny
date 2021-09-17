@@ -14,3 +14,11 @@
 cd ~
 git clone https://github.com/DesantBucie/korny.git .korny && cd .korny && mv .kshrc ~
 
+echo 'Are you using ksh93u+m from MCDutchie?(y/n)'
+
+while :
+do
+    read ksh_val
+    [[ $ksh_val == 'y' || $ksh_val == 'n' || $ksh_val == 'Y' || $ksh_val == 'N' ]] && break || echo '(y/n)'
+done
+[[ $ksh_val == 'n' || $ksh_val == 'N' ]] && echo 'Go to ~/.korny/plugs/aliases.ksh and comment with # third line'
