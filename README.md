@@ -28,11 +28,11 @@ Original Kornshell is buggy, you can compile one above or use precompiled versio
 
 1. Change default shell to kornshell:
 
-`which ksh` - output will be path to ksh<br/>
+1.1 `which ksh` - output will be path to ksh<br/>
 
-Make sure that ksh is in `/etc/shells` (it can be named ksh93), if there isn't, enter a path
+1.2 Make sure that ksh is in `/etc/shells` (it can be named ksh93), if there isn't, enter a path
 
-`chsh -s <PATH TO KSH>`
+1.3 `chsh -s <PATH TO KSH>`
 
 2. Run: `ksh -c "$(curl -fsSL https://raw.githubusercontent.com/DesantBucie/korny/master/bin/install.ksh)"`
 
@@ -83,5 +83,3 @@ I think in most situations it's going to be quicker. For example look at that ti
 
 And it's definetly quicker than bash, and you shouldn't see many differences in terms of everyday using.
 
-![HelloSystem](https://raw.github.com/DesantBucie/DesantBucie/master/korny/screenshot7.png)
-![ADB](https://raw.github.com/DesantBucie/DesantBucie/master/korny/adb.png)
