@@ -6,10 +6,6 @@ alias __H=`echo "\001"`     # home = ^a = start of line
 alias __Y=`echo "\005"`     # end = ^e = end of line
 alias ls='ls -F'
 alias l='ls -la'
-[[ $(command -v doas) ]] \
-	&& alias sudo='doas'
-[[ $(command -v nvim) ]] \
-	&& alias vim='nvim'
 [[ $(uname) == "SunOS" ]] \
 	&& alias whoami="print $LOGNAME" \
 	&& alias ls="ls --color"

@@ -2,7 +2,7 @@
 
 Something like plugin for kornshell
 
-![Oh Korny](.github/screenshot2.png)
+![Oh Korny](https://raw.github.com/DesantBucie/DesantBucie/master/korny/screenshot2.png)
 
 ## Announcments
 
@@ -20,7 +20,7 @@ New korny version will be installed in ~/local/share, bcs of .folders clutter in
 * FreeBSD and OpenBSD
 * most of linuxes probably
 
-![](.github/korny.png)
+![](https://raw.github.com/DesantBucie/DesantBucie/master/korny/korny.png)
 
 ## Installation
 
@@ -39,10 +39,10 @@ Make sure that ksh is in `/etc/shells` (it can be named ksh93), if there isn't, 
 3. If you are not using the version above, then you will be told to comment 3rd line in ~/.korny/aliases.ksh, and autocd won't work.
 
 #### OpenBSD
- 
+
 In OpenBSD you have to change `local` to `typeset` in /etc/ksh.kshrc, use vim or any other editor, and just search.
 
-![O-BSD](.github/screenshot6.png)
+![O-BSD](https://raw.githubusercontent.com/DesantBucie/DesantBucie/master/korny/screenshot6.png)
 
 You also need to set `export ENV=$HOME/.kshrc` in ~/.profile or /etc/profile
 
@@ -54,7 +54,7 @@ Set `export ENV=$HOME/.kshrc` in ~/.profile or /etc/profile
 
 Change 3rd line named `PROMPT` in `.kshrc` to filename without extension i.e ibsd
 
-![alt](.github/prompt.png)
+![alt](https://raw.githubusercontent.com/DesantBucie/DesantBucie/master/korny/prompt.png)
 
 ## Update
 
@@ -69,19 +69,19 @@ Type: `korny_uninstall`
 If you only used ohmyzsh for theme and aliases, like I did, then you
 probably find this similar and maybe faster. 
 
-![I hate alt text](.github/screenshot3.png)
+![I hate alt text](https://raw.githubusercontent.com/DesantBucie/DesantBucie/master/korny/screenshot3.png)
 
 I integrated my basic theme with git. If you access via ssh, you will get different color.
 
-![ssh](.github/screenshot5.png)
+![ssh](https://raw.githubusercontent.com/DesantBucie/DesantBucie/master/korny/screenshot5.png)
 
 ## Why should I use it instead of zsh?
 
 I think in most situations it's going to be quicker. For example look at that times i measured.
 
-![Yesyesyes](.github/screenshot4.png)
+![Yesyesyes](https://raw.githubusercontent.com/DesantBucie/DesantBucie/master/korny/screenshot4.png)
 
 And it's definetly quicker than bash, and you shouldn't see many differences in terms of everyday using.
 
-![HelloSystem](.github/screenshot7.png)
-![ADB](.github/adb.png)
+![HelloSystem](https://raw.github.com/DesantBucie/DesantBucie/master/korny/screenshot7.png)
+![ADB](https://raw.github.com/DesantBucie/DesantBucie/master/korny/adb.png)

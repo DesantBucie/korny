@@ -1,6 +1,4 @@
-rm -rf $KORNY_FOLDER
-
+[[ $KORNY_FOLDER != "" ]] && rm -rf $KORNY_FOLDER || rm -rf ~/.korny
 rm ~/.kshrc
-
 [[ -f ~/.kshrc_bak ]] && mv ~/.kshrc_bak ~/.kshrc
 

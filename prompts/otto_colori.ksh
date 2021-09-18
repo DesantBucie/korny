@@ -8,8 +8,6 @@ PS1.get()
 
 	.sh.value+="${fg[green]}$(_print_short_pwd)\ ${fg[reset]}"
 	.sh.value+="${fg[red]}$(_git_prompt)${fg[reset]}"
-    #adb and fastboot show up, when phone is connected to fastboot or adb mode
-    .sh.value+="${fg[green]}$(_adb_rdy)${fg[reset]}${fg[blue]}$(_fastboot_rdy)${fg[reset]}"
     # Remember to reset at the and, so the whole terminal won't be painted
 	.sh.value+="${fg[brown]}-\> ${fg[reset]}"
 }

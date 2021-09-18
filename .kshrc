@@ -1,4 +1,4 @@
-VER=2
+export KORNY_VER=2
 export KORNY_FOLDER="$HOME/.local/share/korny"
 HISTFILE="$HOME/.sh_history"
 HISTSIZE=5000
@@ -14,7 +14,13 @@ do
 done
 
 #If you want to load minimal + specific plugin you can do something like this
-#. $FOLDER/plugs/specific_plugin.ksh
+#. $KORNY_FOLDER/plugs/specific_plugin.ksh
+#or few specific plugins
+#load_array=(android git_aliases)
+#for arr in ${load_array[@]}
+#do
+#    . $KORNY_FOLDER/plugs/$arr.ksh
+#done
 
 . $KORNY_FOLDER/prompts/$PROMPT.ksh
 export PATH=$PATH":$KORNY_FOLDER/bin"
