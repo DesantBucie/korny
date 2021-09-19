@@ -1,15 +1,15 @@
 _print_short_pwd()
 {
-	{ 
-	[[ "$PWD" == "$HOME" ]] || [[ "$PWD" == "/usr$HOME" ]] \
-		&& print -n "~"; 
-	} || { 
-	[[ "$PWD" == "/" ]] \
-		&& print -n "/"; 
-	} \
-		|| print -n "${PWD##*/}"
+	 
+	if [[ "$PWD" == "$HOME" ]] || [[ "$PWD" == "/usr$HOME" ]]; then
+		echo -n "~" 
+	elif [[ "$PWD" == "/" ]]; then
+		echo -n "/" 
+    else
+        echo -n "${PWD##*/}"
+    fi
 }
 _print_pwd()
 {
-    [[ "${PWD#$HOME}" != "$PWD" ]] && print -n "~${PWD#$HOME}" || print -n "$PWD"
+    [[ "${PWD#$HOME}" != "$PWD" ]] && echo -n "~${PWD#$HOME}" || echo -n "$PWD"
 }

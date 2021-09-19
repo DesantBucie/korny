@@ -1,1 +1,2 @@
+#!/usr/bin/env ksh
 export MallocScribble=1

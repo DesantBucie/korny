@@ -1,3 +1,4 @@
-[[ $KORNY_FOLDER != "" ]] && $(cd $KORNY_FOLDER && git stash && git pull origin master) 2&> /dev/null \
-|| $(cd ~/.korny && git stash && git pull origin master) 2&> /dev/null   
+#!/usr/bin/env ksh
+[[ $KORNY_FOLDER != "" ]] && $(cd $KORNY_FOLDER && git stash && git pull --rebase --stat origin master) 2&> /dev/null \
+|| $(cd ~/.korny && git stash && git pull --rebase --stat origin master) 2&> /dev/null   
 
