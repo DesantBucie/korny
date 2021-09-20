@@ -6,12 +6,13 @@ HISTFILE="$HOME/.sh_history"
 HISTSIZE=5000
 
 #for PLUS in $$KORNY_FOLDER/plugs/* #This would load all the plugins, and... 
-for PLUG in $KORNY_FOLDER/plugs/_* #you could then comment this line, and 14-18 line
+for PLUG in $KORNY_FOLDER/plugs/_* #you could then comment this line, and 15-19 line
 do 
     . $PLUG
 done
 
-set -A load_array android git_aliases
+# Must be inline, define plugins filenames that you want to use
+set -A load_array -- android git_aliases _aliases
 for arr in ${load_array[@]}
 do
     . $KORNY_FOLDER/plugs/$arr.ksh

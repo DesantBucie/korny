@@ -5,10 +5,6 @@ KORNY_FOLDER="$TARGET_FOLDER/korny"
 GIT_VERS="$(git --version)"
 GIT_REQU="2.19"
 
-legacy_ksh(){
-    echo '3i # . w q' | ed $KORNY_FOLDER/plugs/_aliases.ksh 
-    echo '6i # . w q' | ed $KORNY_FOLDER/plugs/autocd.ksh
-}
 read_val(){
 while :
 do
@@ -18,7 +14,6 @@ done
 }
 requirements() {
 ! { type ksh || type ksh93; } && echo "No Korn Shell installed" && exit 127
-! type ed && echo "No ed installed" && exit 127
 ! type sed && echo "No sed installed" && exit 127
 ! type git && echo "Script needs git to clone repository" && exit 127
 ! type printf && echo "Printf is needed" && exit 127
@@ -42,10 +37,7 @@ else
 fi
 }
 postinstall() {
-echo 'Are you using ksh93u+m(downloaded from github)?'
-
-ksh_val=$(read_val)
-[[ $ksh_val == 'n' || $ksh_val == 'N' ]] && legacy_ksh && echo "If something wouldn't work, try commenting 3rd line in $KORNY_FOLDER/plugs/_aliases.ksh\n and 6th line in $KORNY_FOLDER/plugs/autocd.ksh"
+echo "If something wouldn't work, unload ksh93 plugin from ~/.kshrc" 
 }
 
 requirements

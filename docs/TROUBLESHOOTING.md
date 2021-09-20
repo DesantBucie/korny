@@ -1,10 +1,11 @@
-#### Error in \_aliases.ksh, no such option as --nobackslash
+#### Error in no such option as --nobackslash or error ...autocd.ksh 
 
-Just comment 3rd line in \_aliases.ksh, this is specific ksh93u+m option
+Unload ksh93 from plugins in ~/.kshrc
 
-#### Error ...autocd.ksh 
+#### Stop line wrapping in oksh and mksh, emacs mode(default)
 
-Just comment 6th line, autocd works only with ksh93u+m
+The only thing you can do is to put `set +o emacs` on the bottom of `~/.kshrc`. 
+Note that this will mean vi mode will be default, and completely different bindings will need to be used
 
 #### Using ksh93u+m on OpenBSD
 

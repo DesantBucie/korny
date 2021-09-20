@@ -79,6 +79,8 @@ Lookup [all 256 colors here:](https://jonasjacek.github.io/colors/)
 To use it use `${cfg[color_name_you_defined]}`. The same goes for background(`${cbg[]}`).
 To stop coloring we use `$RESET`. 
 
+Also custom colors (higher than 15) are independent of user's terminal colorscheme, so red always will be red, blue blue and so on.
+
 Just to be sure, in this case `${cfg[c_red]}` != `${fg[red]}` as these are two different colors (1 vs 196)
 
 ## Other things to say

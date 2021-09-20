@@ -26,11 +26,11 @@ New korny also supports mksh and pdksh.
 
 1. Change default shell to kornshell(if you have to):
 
-1.1 `which ksh` - output will be path to ksh
+   * `which ksh` - output will be path to ksh
 
-1.2 Make sure that ksh is in `/etc/shells`, if there isn't, enter full path
+   * Make sure that ksh is in `/etc/shells`, if there isn't, enter full path
 
-1.3 `chsh -s <PATH TO KSH>`
+   * `chsh -s <PATH TO KSH>`
 
 2. Run: `ksh -c "$(curl -fsSL https://raw.githubusercontent.com/DesantBucie/korny/master/bin/install.ksh)"`
 
@@ -50,15 +50,15 @@ Change 3rd line named `PROMPT` in ~/`.kshrc` to filename without extension i.e i
 
 By default you will load `aliases`, `git_aliases` and `android` plugins.
 
-You have to enter filenames of plugins w/o extensions in `~/.kshrc`, for example
+To add plugin, just write it's filename in `.kshrc`
 
 ```bash
 #...
-#load_array is array, next are plugin names, this is ksh88 syntax
-set -A load_array android git_aliases aliases 
+#Must be in one line unfortunately
+set -A load_array android git_aliases _aliases #here you define plugin names
 for arr in ${load_array[@]}
 do
-    . $KORNY_FOLDER/plugs/$arr.ksh
+    . $KORNY_FOLDER/plugs/$arr.ksh # In that case, three additional plugins(+base) will be loaded
 done
 #...
 ```
