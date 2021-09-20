@@ -27,17 +27,21 @@ install() {
 cd $TARGET_FOLDER
 if [[ "$(printf '%s\n' "$GIT_REQU" "$GIT_VERS" | sort -V | sed 1q)" == "$GIT_REQU" ]]; then
     git clone --filter=blob:none --sparse https://github.com/DesantBucie/korny
+    git switch dev
     git sparse-checkout add plugs/ bin/korny* prompts/
     echo "Do you want documentation?"
     answer=$(read_val)
     [[ $answer == 'Y' || $answer == 'y' ]] && git sparse-checkout add docs/
+    echo "Do you use OpenBSD ksh and want completion?"
+    answer2=$(read_val)
+    [[ $answer2 == 'Y' || $answer2 == 'y' ]] && git sparse-checkout add completion/
 else
     echo "Partial cloning not supported, consider updating git next time"
     git clone https://github.com/DesantBucie/korny
 fi
 }
 postinstall() {
-echo "If something wouldn't work, unload ksh93 plugin from ~/.kshrc" 
+echo "If something wouldn't work, check docs/TROUBLESHOOTING.md, if you don't find your answer don't be afraid to make github issue" 
 }
 
 requirements

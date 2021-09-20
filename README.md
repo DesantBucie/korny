@@ -42,7 +42,7 @@ Also mksh use .mkshrc, so you either rename .kshrc to .mkshrc, or use step above
 
 ## Change prompt
 
-Change 3rd line named `PROMPT` in ~/`.kshrc` to filename without extension i.e ibsd
+Change line named `PROMPT` in ~/`.kshrc` to filename without extension i.e ibsd
 
 ![alt](https://raw.githubusercontent.com/DesantBucie/DesantBucie/master/korny/prompt.png)
 
@@ -50,18 +50,21 @@ Change 3rd line named `PROMPT` in ~/`.kshrc` to filename without extension i.e i
 
 By default you will load `aliases`, `git_aliases` and `android` plugins.
 
-To add plugin, just write it's filename in `.kshrc`
+To add plugin, just edit `~/.kshrc`, type it's filename
 
 ```bash
-#...
-#Must be in one line unfortunately
-set -A load_array android git_aliases _aliases #here you define plugin names
-for arr in ${load_array[@]}
-do
-    . $KORNY_FOLDER/plugs/$arr.ksh # In that case, three additional plugins(+base) will be loaded
-done
-#...
+set -A plugins_array -- \
+android git_aliases _aliases #Load plugins
+load_plugs ${plugins_array[@]}
 ```
+
+## Load completion
+
+Completion works only in OpenBSD KSH, it is forked from [hmyksh](https://github.com/qbit/hmyksh)
+
+You load it the same way as plugins, in `~/.kshrc` but istead of `plugins-array` load it in `completion_array` just below
+
+Note that not all completions are crossplatform(i.e openbsd)
 
 ## Update
 

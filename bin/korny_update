@@ -1,4 +1,4 @@
 #!/usr/bin/env ksh
-[[ $KORNY_FOLDER != "" ]] && $(cd $KORNY_FOLDER && git stash && git pull --rebase --stat origin master) 2&> /dev/null \
-|| $(cd ~/.korny && git stash && git pull --rebase --stat origin master) 2&> /dev/null   
+[[ $KORNY_FOLDER != "" ]] && $(cd $KORNY_FOLDER && git stash && git pull --rebase --stat origin master)
+|| $(cd ~/.korny && git stash && git pull --rebase --stat origin master && echo 'You could update your .kshrc manually, for steps look docs/MOVING_FROM_OLD_VERSION.md') 
 

@@ -4,19 +4,15 @@ export KORNY_FOLDER="$HOME/.local/share/korny"
 PROMPT=otto_colori
 HISTFILE="$HOME/.sh_history"
 HISTSIZE=5000
+. $KORNY_FOLDER/base.ksh
 
-#for PLUS in $$KORNY_FOLDER/plugs/* #This would load all the plugins, and... 
-for PLUG in $KORNY_FOLDER/plugs/_* #you could then comment this line, and 15-19 line
-do 
-    . $PLUG
-done
+set -A plugins_array -- \
+android git_aliases _aliases #Load plugins by filename
+load_plugs ${plugins_array[@]}
 
-# Must be inline, define plugins filenames that you want to use
-set -A load_array -- android git_aliases _aliases
-for arr in ${load_array[@]}
-do
-    . $KORNY_FOLDER/plugs/$arr.ksh
-done
+set -A completion_array -- \
+git #Type completion file names here
+load_completion ${completion_array[@]}
 
 . $KORNY_FOLDER/prompts/$PROMPT.ksh
 export PATH=$PATH":$KORNY_FOLDER/bin"
