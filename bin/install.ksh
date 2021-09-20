@@ -17,22 +17,25 @@ requirements() {
 ! type sed && echo "No sed installed" && exit 127
 ! type git && echo "Script needs git to clone repository" && exit 127
 ! type printf && echo "Printf is needed" && exit 127
+! type tput && echo "No tput detected" && exit 127
 }
 preinstall() {
 [[ -f ~/.kshrc ]] && mv ~/.kshrc ~/.kshrc_bak && echo "You have .kshrc in your, home, renaming it to .kshrc_bak, remember to copy your data to new .kshrc"
 
-[[ -d $KORNY_FOLDER ]] && rm -rf $KORNY_FOLDER/* && rm -rf $KORNY_FOLDER/.* || mkdir  -p $KORNY_FOLDER
+[[ -d $KORNY_FOLDER ]] && rm -rf $KORNY_FOLDER || mkdir  -p $KORNY_FOLDER
 }
 install() {
 cd $TARGET_FOLDER
 if [[ "$(printf '%s\n' "$GIT_REQU" "$GIT_VERS" | sort -V | sed 1q)" == "$GIT_REQU" ]]; then
     git clone --filter=blob:none --sparse https://github.com/DesantBucie/korny
+    cd $KORNY_FOLDER
     git switch dev
-    git sparse-checkout add plugs/ bin/korny* prompts/
-    echo "Do you want documentation?"
+    mv .kshrc $HOME
+    git sparse-checkout add plugs/ bin/ prompts/
+    echo "Do you want documentation?(y/n)"
     answer=$(read_val)
     [[ $answer == 'Y' || $answer == 'y' ]] && git sparse-checkout add docs/
-    echo "Do you use OpenBSD ksh and want completion?"
+    echo "Do you use OpenBSD ksh and want completion?(y/n)"
     answer2=$(read_val)
     [[ $answer2 == 'Y' || $answer2 == 'y' ]] && git sparse-checkout add completion/
 else

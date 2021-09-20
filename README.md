@@ -55,7 +55,7 @@ To add plugin, just edit `~/.kshrc`, type it's filename
 ```bash
 set -A plugins_array -- \
 android git_aliases _aliases #Load plugins
-load_plugs ${plugins_array[@]}
+load_plugs 
 ```
 
 ## Load completion
