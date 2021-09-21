@@ -29,7 +29,6 @@ cd $TARGET_FOLDER
 if [[ "$(printf '%s\n' "$GIT_REQU" "$GIT_VERS" | sort -V | sed 1q)" == "$GIT_REQU" ]]; then
     git clone --filter=blob:none --sparse https://github.com/DesantBucie/korny
     cd $KORNY_FOLDER
-    git switch dev
     mv .kshrc $HOME
     git sparse-checkout add plugs/ bin/ prompts/
     echo "Do you want documentation?(y/n)"
