@@ -15,7 +15,7 @@ New korny also supports mksh and pdksh.
 * git (avoid apple crappy one, install one from nix or brew)
 * ksh93 ([Best option](https://github.com/ksh93/ksh)), pdksh or mksh(tested 2020).
 * printf built-in to shell, or as external program
-* tput
+* tput(should be built-in as well)
 
 ## Tested OSes
 
@@ -50,19 +50,19 @@ Change line named `PROMPT` in ~/`.kshrc` to filename without extension i.e ibsd
 
 ## Load plugins
 
-By default you will load `aliases`, `git_aliases` and `android` plugins.
+By default you will load `git_aliases` and `android` plugins(plus base plugins starting with. `_`).
 
 To add plugin, just edit `~/.kshrc`, type it's filename
 
 ```bash
 set -A plugins_array -- \
-android git_aliases _aliases #Load plugins
+android git_aliases #Load plugins
 load_plugs 
 ```
 
 ## Load completion
 
-Completion works only in OpenBSD KSH, it is forked from [hmyksh](https://github.com/qbit/hmyksh)
+Completion works only in OpenBSD KSH, it is forked from [ohmyksh](https://github.com/qbit/ohmyksh)
 
 You load it the same way as plugins, in `~/.kshrc` but istead of `plugins-array` load it in `completion_array` just below
 
