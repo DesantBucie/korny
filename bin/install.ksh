@@ -4,12 +4,15 @@ TARGET_FOLDER="$HOME/.local/share"
 KORNY_FOLDER="$TARGET_FOLDER/korny"
 GIT_VERS="$(git --version)"
 GIT_REQU="2.19"
-
 read_val(){
 while :
 do
-    read value
-    [[ $value == 'y' || $value == 'n' || $value == 'Y' || $value == 'N' ]] && break || echo '(y/n)'
+    read answer
+    if [[ "$answer" == 'y' || "$answer" == 'n' || "$answer" == 'Y' || "$answer" == 'N' ]]; then
+        break
+    else 
+        echo '(y/n)'
+    fi
 done
 }
 requirements() {
@@ -22,21 +25,26 @@ requirements() {
 preinstall() {
 [[ -f ~/.kshrc ]] && mv ~/.kshrc ~/.kshrc_bak && echo "You have .kshrc in your, home, renaming it to .kshrc_bak, remember to copy your data to new .kshrc"
 
-[[ -d $KORNY_FOLDER ]] && rm -rf $KORNY_FOLDER || mkdir  -p $KORNY_FOLDER
+if [[ -d $KORNY_FOLDER ]]; then 
+    rm -rf "$KORNY_FOLDER"
+else 
+    mkdir -p "$KORNY_FOLDER"
+fi
 }
 install() {
-cd $TARGET_FOLDER
+echo "install"
+cd "$TARGET_FOLDER" || exit 127
 if [[ "$(printf '%s\n' "$GIT_REQU" "$GIT_VERS" | sort -V | sed 1q)" == "$GIT_REQU" ]]; then
     git clone --filter=blob:none --sparse https://github.com/DesantBucie/korny
-    cd $KORNY_FOLDER
-    mv .kshrc $HOME
+    cd "$KORNY_FOLDER" || exit 127
+    mv .kshrc "$HOME"
     git sparse-checkout add plugs/ bin/ prompts/
     echo "Do you want documentation?(y/n)"
-    answer=$(read_val)
+    read_val
     [[ $answer == 'Y' || $answer == 'y' ]] && git sparse-checkout add docs/
     echo "Do you use OpenBSD ksh and want completion?(y/n)"
-    answer2=$(read_val)
-    [[ $answer2 == 'Y' || $answer2 == 'y' ]] && git sparse-checkout add completion/
+    read_val 
+    [[ $answer == 'Y' || $answer == 'y' ]] && git sparse-checkout add completion/
 else
     echo "Partial cloning not supported, consider updating git next time"
     git clone https://github.com/DesantBucie/korny
