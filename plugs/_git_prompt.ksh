@@ -1,11 +1,11 @@
 #Currently not used
-_git_check_pull()
+_git_check_changes()
 {
-        [[ $(git rev-parse HEAD) = $(git ls-remote $(git rev-parse --abbrev-ref @{u} | \
-sed 's/\// /g') | cut -f1) ]] || echo -n v
+        [[ $(git status --porcelain --untracked-files=no) != '' ]] \
+            && echo "*"
 }
 _git_prompt()
 {     
         [[ $(git rev-parse --abbrev-ref HEAD 2> /dev/null) != "" ]] \
-		    && echo -n "$(git rev-parse --abbrev-ref HEAD 2> /dev/null) "
+		    && echo -n "$(_git_check_changes)$(git rev-parse --abbrev-ref HEAD 2> /dev/null) "
 }

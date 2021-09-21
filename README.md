@@ -14,6 +14,8 @@ New korny also supports mksh and pdksh.
 
 * git (avoid apple crappy one, install one from nix or brew)
 * ksh93 ([Best option](https://github.com/ksh93/ksh)), pdksh or mksh(tested 2020).
+* printf built-in to shell, or as external program
+* tput
 
 ## Tested OSes
 
