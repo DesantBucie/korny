@@ -16,8 +16,8 @@ esac
 custom_color()
 {
         export $1=$2
-        cfg[$2]=$(tput $cap_setfg $2)
-        cbg[$2]=$(tput $cap_setbg $2)
+        cfg[$2]=$(tput $cap_setfg $2 $2 $2)
+        cbg[$2]=$(tput $cap_setbg $2 $2 $2)
 }
 load_colors()
 {
