@@ -1,16 +1,10 @@
-set -A fg
-set -A bg
-set -A cfg
-set -A cbg
-export cap_setfg cap_setbg
+set -A fg bg cfg cbg
+export cap_setfg=setaf 
+export cap_setbg=setab
 case $(uname) in
 FreeBSD)
         cap_setfg=AF
         cap_setbg=AB
-        ;;
-*)
-        cap_setfg=setaf
-        cap_setbg=setab
         ;;
 esac
 custom_color()
@@ -25,9 +19,9 @@ load_colors()
         integer i=0
         while (( $i < 8 ))
         do 
-            fg[$i]=$(tput $cap_setfg $i $i $i)
-            bg[$i]=$(tput $cap_setbg $i $i $i)
-            (( i=$i+1 ))
+                fg[$i]=$(tput $cap_setfg $i $i $i)
+                bg[$i]=$(tput $cap_setbg $i $i $i)
+                (( i=$i+1 ))
         done
 }
 load_colors
