@@ -1,5 +1,6 @@
 export KORNY_VER=2
 export KORNY_FOLDER="$HOME/.local/share/korny"
+export TERM="xterm-256color"
 #Here you change the prompt
 PROMPT=otto_colori
 HISTFILE="$HOME/.sh_history"
