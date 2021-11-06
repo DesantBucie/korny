@@ -4,12 +4,6 @@ Something like plugin manager for kornshell
 
 ![Oh Korny](https://raw.github.com/DesantBucie/DesantBucie/master/korny/screenshot2.png)
 
-## Announcments
-
-New korny will be installed in ~/local/share, bcs of .folders clutter in home directory. Users using old .kshrc, won't be affected, as .kshrc isn't updated, yet they will get all the updates
-
-New korny also supports mksh and pdksh.
-
 ## Requirements
 
 * git (avoid apple crappy one, install one from nix or brew)
