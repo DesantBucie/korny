@@ -1,4 +1,5 @@
 #Solution thanks to https://github.com/McDutchie and https://github.com/ksh93/ksh
+alias ~='cd ~'
 if [[ $KSH_VERSION == *'u+m'* ]]; then
     set --nobackslashctrl
     _do_autocd()

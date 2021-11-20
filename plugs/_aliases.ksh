@@ -3,7 +3,6 @@ set -o emacs
 alias __H='echo "\001"'     # home = ^a = start of line
 alias __Y='echo "\005"'     # end = ^e = end of line
 alias ..='cd ..'
-alias ~='cd ~'
 alias ls='ls -F'
 alias l='ls -la'
 [[ $(uname) == "SunOS" ]] \
