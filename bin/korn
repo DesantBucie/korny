@@ -35,10 +35,10 @@ remove(){
     done    
 }
 case "$1" in
-u, update)
+u | update)
     update
     ;;
-rm, remove)
+rm | remove)
     remove
     ;;
 scribble)
