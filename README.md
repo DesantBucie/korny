@@ -64,11 +64,11 @@ Note that not all completions are crossplatform(i.e openbsd)
 
 ## Update
 
-Type: `korny_update`
+Type: `korn u` or `korn update`
 
 ## Uninstall
 
-Type: `korny_uninstall`
+Type: `korn rm` or `korn remove`
 
 ## About
 
