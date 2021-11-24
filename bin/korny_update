@@ -1,13 +1,2 @@
-#!/usr/bin/env ksh
-curr_pwd=$PWD
-if [[ $KORNY_FOLDER != "" ]]; then
-    cd $KORNY_FOLDER 
-    git stash 
-    git pull --rebase --stat origin master
-else
-    cd ~/.korny 
-    git stash 
-    git pull --rebase --stat origin master
-    echo 'You could update your .kshrc manually, for steps look docs/MOVING_FROM_OLD_VERSION.md'
-fi
-cd ${curr_pwd}
+printf("Next time use \`korn update\` to update");
+korn update

@@ -1,5 +1,1 @@
-#!/usr/bin/env ksh
-[[ $KORNY_FOLDER != "" ]] && rm -rf $KORNY_FOLDER || rm -rf ~/.korny
-rm ~/.kshrc
-[[ -f ~/.kshrc_bak ]] && mv ~/.kshrc_bak ~/.kshrc
-
+korn remove

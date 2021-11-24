@@ -1,0 +1,9 @@
+#!/bin/sh
+if [[ -z "$1" ]]; then
+    echo "Use this, when program cannot be run, because it's not verified."
+    echo "Usage: disable-quarantine path/to/program.app"
+if [[ $(uname) != "Darwin" ]]; then
+    echo "This is for macOS only"
+else 
+    xattr -d com.apple.quarantine "$1"
+fi
