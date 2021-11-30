@@ -6,7 +6,7 @@ alias ..='cd ..'
 alias ls='ls -F'
 alias l='ls -la'
 [[ $(uname) == "SunOS" ]] \
-	&& alias whoami="print $LOGNAME" \
+	&& alias whoami='print $LOGNAME' \
 	&& alias ls="ls --color"
 [[ $(uname) == "OpenBSD" ]] \
     && alias poweroff="halt -p"

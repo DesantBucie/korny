@@ -1,2 +1,2 @@
-printf("Next time use \`korn update\` to update");
+printf "Next time use \`korn update\` to update"
 korn update

@@ -8,24 +8,28 @@ scribble(){
 update(){
     curr_pwd=$PWD
     if [[ $KORNY_FOLDER != "" ]]; then
-        cd $KORNY_FOLDER 
+        cd "$KORNY_FOLDER" || echo "cd failed" && exit 1
         git stash 
         git pull --rebase --stat origin master
     else
-        cd ~/.korny 
+        cd ~/.korny || echo "$HOME/.korny doesn\'t exist" && exit 1
         git stash 
         git pull --rebase --stat origin master
         echo 'You should update your .kshrc manually, for steps look docs/MOVING_FROM_OLD_VERSION.md'
     fi
-    cd ${curr_pwd}
+    cd "$curr_pwd"  || echo "Directory no longer exist" && exit 1
 }
 remove(){
     are_you_sure=1
     while $are_you_sure -eq 1; do
         printf "Are you sure? [y/n]: "
-        input=read
+        read -r input
         if [[ $input == "y" || $input == "Y" ]]; then
-            [[ $KORNY_FOLDER != "" ]] && rm -rf $KORNY_FOLDER || rm -rf ~/.korny
+            if [[ $KORNY_FOLDER != "" ]]; then
+                rm -rf "$KORNY_FOLDER"
+            else
+                rm -rf ~/.korny
+            fi
             rm ~/.kshrc
             [[ -f ~/.kshrc_bak ]] && mv ~/.kshrc_bak ~/.kshrc
             exit 0

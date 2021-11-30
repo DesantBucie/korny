@@ -7,7 +7,7 @@ GIT_REQU="2.19"
 read_val(){
 while :
 do
-    read answer
+    read -r answer
     if [[ "$answer" == 'y' || "$answer" == 'n' || "$answer" == 'Y' || "$answer" == 'N' ]]; then
         break
     else 
