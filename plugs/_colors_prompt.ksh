@@ -7,6 +7,14 @@ FreeBSD)
         cap_setbg=AB
         ;;
 esac
+_ext_ascii()
+{
+    #if [[ $(tput as) == "" && $(tput ae) == "" ]]; then
+        tput as
+        printf "$1"
+        tput ae
+    #fi
+}
 custom_color()
 {
         export "$1"="$2"
