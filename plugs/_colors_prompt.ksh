@@ -9,11 +9,11 @@ FreeBSD)
 esac
 _ext_ascii()
 {
-    #if [[ $(tput as) == "" && $(tput ae) == "" ]]; then
-        tput as
+    tput as 2> /dev/null
+    if [[ $? == 0 ]]; then
         printf "$1"
         tput ae
-    #fi
+    fi
 }
 custom_color()
 {
@@ -25,6 +25,7 @@ load_colors()
 {
         export black=0 red=1 green=2 brown=3 blue=4 magenta=5 cyan=6 white=7 RESET
         RESET="$(printf '\033[0;10m')"
+        BOLD="$(tput bold)"
         integer i=0
         while (( i < 8 ))
         do 

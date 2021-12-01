@@ -10,11 +10,11 @@ update(){
     if [[ $KORNY_FOLDER != "" ]]; then
         cd "$KORNY_FOLDER" || echo "cd failed" && exit 1
         git stash 
-        git pull --rebase --stat origin master
+        git pull --rebase --stat origin "$(_git_branch)"
     else
         cd ~/.korny || echo "$HOME/.korny doesn\'t exist" && exit 1
         git stash 
-        git pull --rebase --stat origin master
+        git pull --rebase --stat origin "$(_git_branch)"
         echo 'You should update your .kshrc manually, for steps look docs/MOVING_FROM_OLD_VERSION.md'
     fi
     cd "$curr_pwd"  || echo "Directory no longer exist" && exit 1
