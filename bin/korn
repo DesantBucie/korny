@@ -1,3 +1,4 @@
+#!/usr/bin/env ksh
 usage(){
     printf "Usage: korn [command]\n"
     printf "commands: update, remove, scribble(c debbuging)\n"

@@ -7,6 +7,27 @@ FreeBSD)
         cap_setbg=AB
         ;;
 esac
+_multiline(){
+    if [[ $(set -o | grep multiline) == *"multiline"* ]]; then
+        set +o multiline
+    fi
+}
+_ls_colors(){
+    export CLICOLORS=1
+    if [[ -z "$1" || -z "$2" ]]; then
+        if [[ $(uname) == "Linux"  || $(uname) == "SunOS" ]]; then
+            export LSCOLORS='di=36:ln=1;31:so=37:pi=1;33:ex=35:bd=37:cd=37:su=37:sg=37:tw=32:ow=32'
+        else
+            export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
+        fi
+    else
+        if [[ $(uname) == "Linux"  || $(uname) == "SunOS" ]]; then
+            export LSCOLORS="$1"
+        else
+            export LSCOLORS="$2"
+        fi
+    fi
+}
 _ext_ascii()
 {
     tput as 2> /dev/null

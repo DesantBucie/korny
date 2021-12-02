@@ -56,7 +56,7 @@ PS1='$(whoami) $(_print_short_pwd)$(_git_prompt)-> '
 Now let's say we want to color our prompt. Let's split our prompt a little, so it's easier to read.
 Note that in order to concat PS1, I have to copy it's name.
 
-This is equivalent to statement `i=i+1` (PS1="PS1"'content')
+This is equivalent to statement `i=i+1` (PS1="$PS1"'content')
 
 ```bash
     PS1='${bg[red]}$(whoami)$RESET ' # space at the end
@@ -76,12 +76,12 @@ Lookup [all 256 colors here:](https://jonasjacek.github.io/colors/)
     PS1='${bg[red]}$(whoami)$RESET '
     PS1="$PS1"'$(_print_short_pwd)${cfg[c_red]}$(_git_prompt)$RESET-> '
 ```
-To use it use `${cfg[color_name_you_defined]}`. The same goes for background(`${cbg[]}`).
+To use it use `${cfg[color\_name\_you\_defined]}`. The same goes for background(`${cbg[]}`).
 To stop coloring we use `$RESET`. 
 
 Also custom colors (higher than 15) are independent of user's terminal colorscheme, so red always will be red, blue blue and so on.
 
-Just to be sure, in this case `${cfg[c_red]}` != `${fg[red]}` as these are two different colors (1 vs 196)
+Just to be sure, in this case `${cfg[c\_red]}` != `${fg[red]}` as these are two different colors (1 vs 196)
 
 ## Other things to say
 

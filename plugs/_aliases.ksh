@@ -1,8 +1,3 @@
-_multiline(){
-    if [[ $(set -o | grep multiline) == *"multiline"* ]]; then
-        set +o multiline
-    fi
-}
 set -o emacs
 # Aliases taken from https://stackoverflow.com/questions/1623256/make-arrow-and-delete-keys-work-in-kornshell-command-line  
 alias __H='echo "\001"'     # home = ^a = start of line
