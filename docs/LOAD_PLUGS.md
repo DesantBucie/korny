@@ -1,7 +1,8 @@
 # LOAD PLUGS
 
-By default most plugins are loaded, if you want bare minimal, load only those, starting with `_`
-This would mean commenting line14-18 in `~/.kshrc`
-
-Note that ibsd shell won't work with bare minimal as it uses android.ksh
-
+By default only git\_aliases and android are loaded. If you want to load more, just edit .kshrc and enter their filenames here:
+```
+set -A plugins_array -- \
+android git_aliases your_plugin #<----- here Load plugins by filename
+load_plugs
+```

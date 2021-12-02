@@ -5,9 +5,5 @@
 PS1="$PS1"'${fg[green]}$(_print_short_pwd) $RESET'
 PS1="$PS1"'${fg[red]}$(_git_prompt)$RESET'
 PS1="$PS1"'${fg[brown]}-> $RESET'
-export CLICOLOR=1
-# This are colors for ls program
-[[ $(uname) == "Linux" || $(uname) == "SunOS" ]] \
-	&& export LSCOLORS='di=36:ln=1;31:so=37:pi=1;33:ex=35:bd=37:cd=37:su=37:sg=37:tw=32:ow=32' \
-	|| export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 
+_ls_colors

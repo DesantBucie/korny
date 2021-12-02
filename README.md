@@ -7,7 +7,7 @@ Something like plugin manager for kornshell
 ## Requirements
 
 * git (avoid apple crappy one, install one from nix or brew)
-* ksh93 ([Best option](https://github.com/ksh93/ksh)), pdksh or mksh(tested 2020).
+* ksh93 ([Best option](https://github.com/ksh93/ksh)), pdksh or mksh(with limitations).
 * printf built-in to shell, or as external program
 * tput(should be built-in as well)
 
@@ -45,8 +45,8 @@ Change line named `PROMPT` in ~/`.kshrc` to filename without extension i.e ibsd
 ## Load plugins
 
 By default you will load `git_aliases` and `android` plugins(plus base plugins starting with. `_`).
-
-To add plugin, just edit `~/.kshrc`, type it's filename
+Plugins with __.ksh93__, are for ksh93 only.
+To add plugin, just edit `~/.kshrc`, enter it's filename
 
 ```bash
 set -A plugins_array -- \
@@ -56,7 +56,7 @@ load_plugs
 
 ## Load completion
 
-Completion works only in OpenBSD KSH, it is forked from [ohmyksh](https://github.com/qbit/ohmyksh)
+Completion works only in oksh, it is forked from [ohmyksh](https://github.com/qbit/ohmyksh)
 
 You load it the same way as plugins, in `~/.kshrc` but istead of `plugins-array` load it in `completion_array` just below
 
@@ -69,22 +69,4 @@ Type: `korn u` or `korn update`
 ## Uninstall
 
 Type: `korn rm` or `korn remove`
-
-## About
-
-If you only used ohmyzsh for theme and aliases, like I did, then you probably find this similar and faster. 
-
-![I hate alt text](https://raw.githubusercontent.com/DesantBucie/DesantBucie/master/korny/screenshot3.png)
-
-I integrated my basic theme with git. If you access via ssh, you will get different color.
-
-![ssh](https://raw.githubusercontent.com/DesantBucie/DesantBucie/master/korny/screenshot5.png)
-
-## Why should I use it instead of zsh?
-
-I think in most situations it's going to be quicker. For example look at that times i measured.
-
-![Yesyesyes](https://raw.githubusercontent.com/DesantBucie/DesantBucie/master/korny/screenshot4.png)
-
-And it's definetly quicker than bash, and you shouldn't see many differences in terms of everyday using.
 

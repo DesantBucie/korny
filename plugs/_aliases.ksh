@@ -3,10 +3,10 @@ set -o emacs
 alias __H='echo "\001"'     # home = ^a = start of line
 alias __Y='echo "\005"'     # end = ^e = end of line
 alias ..='cd ..'
-alias ls='ls -F'
-alias l='ls -la'
+alias ls='ls -GF'
+alias l='ls -Gla'
 [[ $(uname) == "SunOS" ]] \
-	&& alias whoami="print $LOGNAME" \
+	&& alias whoami='print $LOGNAME' \
 	&& alias ls="ls --color"
 [[ $(uname) == "OpenBSD" ]] \
     && alias poweroff="halt -p"
