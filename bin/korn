@@ -21,8 +21,7 @@ update(){
     cd "$curr_pwd" || exit 1
 }
 remove(){
-    are_you_sure=1
-    while $are_you_sure -eq 1; do
+    while true; do
         printf "Are you sure? [y/n]: "
         read -r input
         if [[ $input == "y" || $input == "Y" ]]; then
