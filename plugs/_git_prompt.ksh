@@ -1,4 +1,3 @@
-#Currently not used
 _git_check_changes()
 {
         [[ $(git status --porcelain --untracked-files=no 2> /dev/null) != '' ]] \

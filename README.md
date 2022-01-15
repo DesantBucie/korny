@@ -6,10 +6,10 @@ Something like plugin manager for kornshell
 
 ## Requirements
 
-* git (avoid apple crappy one, install one from nix or brew)
-* ksh93 ([Best option](https://github.com/ksh93/ksh)), pdksh or mksh(with limitations).
+* git (avoid apple crappy one, install one from nix or brew[^1])
+* ksh93 ([Best option](https://github.com/ksh93/ksh)), pdksh or mksh(with limitations[^2]).
 * printf built-in to shell, or as external program
-* tput(should be built-in as well)
+* tput(should be built-in as well[^3])
 
 ## Tested OSes
 
@@ -17,6 +17,7 @@ Something like plugin manager for kornshell
 * SunOS
 * FreeBSD and OpenBSD
 * Linux should also work
+* even Android
 
 ## Installation
 
@@ -30,9 +31,9 @@ Something like plugin manager for kornshell
 
 2. Run: `ksh -c "$(curl -fsSL https://raw.githubusercontent.com/DesantBucie/korny/master/bin/install.ksh)"`
 
-3. Only ksh93u+m supports autocd, so note that.
+3. Only [ksh93u+m](https://github.com/ksh93/ksh) supports autocd, so note that.
 
-4. Some systems may require setting `export ENV=$HOME/.kshrc` in ~/.profile or /etc/profile(don't forget to reboot).
+4. Some systems may require setting `export ENV=$HOME/.kshrc`[^4] in ~/.profile or /etc/profile(don't forget to reboot).
 
 Also mksh use .mkshrc, so you either rename .kshrc to .mkshrc, or use step above
 
@@ -54,6 +55,8 @@ android git_aliases #Load plugins
 load_plugs 
 ```
 
+To see all plugins, check plugin folder.
+
 ## Load completion
 
 Completion works only in oksh, it is forked from [ohmyksh](https://github.com/qbit/ohmyksh)
@@ -70,3 +73,10 @@ Type: `korn u` or `korn update`
 
 Type: `korn rm` or `korn remove`
 
+[^1]: [This is why.](https://github.com/DesantBucie/korny/issues/17)
+
+[^2]: As I tested it on NetBSD, there were problems with prompt loading if there were too many lines in PS1 variable. It cannot be fixed from this level most likely. 
+
+[^3]: If it's not,(like on termux on android) try installing `coreutils`.
+
+[^4]: You can set any path(and copy .kshrc there), for example i have it under `export ENV="$HOME/.config/ksh/rc"`
