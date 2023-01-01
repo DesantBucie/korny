@@ -6,5 +6,21 @@ if [[ $KSH_VERSION == *'u+m'* ]]; then
     {
         (($#==1)) && ! command -v "$1" >/dev/null && [[ -d $1 ]] && CDPATH= command cd -- "$1" && return 2
     }
+    #_go_back()
+    #{
+    #    if [[ "$1" == ".." && "$2" -eq "$2" && (($#==1)) && ! command -v "$1" >/dev/null ]];
+    #    then
+    #        FOLDER=""
+    #        integer i=0
+    #        while (( i < "$2" ))
+    #        do
+    #            FOLDER="$FOLDER"../
+    #            ((i=i+1))
+    #        done
+    #        echo "$FOLDER"
+    #        CDPATH= command cd -- "$FOLDER"
+    #    fi
+    #}
     trap '((!.sh.level)) && [[ ${.sh.command} != \(* && -o interactive ]] && eval "_do_autocd ${.sh.command}"' DEBUG
+    #trap '((!.sh.level)) && [[ ${.sh.command} != \(* && -o interactive ]] && eval "_go_back ${.sh.command}"' DEBUG
 fi
