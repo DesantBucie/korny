@@ -1,14 +1,6 @@
 set -A fg bg cfg cbg
-export cap_setfg=setaf 
-export cap_setbg=setab
-case $(uname) in
-FreeBSD)
-        cap_setfg=AF
-        cap_setbg=AB
-        ;;
-esac
 _multiline(){
-    if [[ $(set -o | grep multiline) == *"multiline"* ]]; then
+    if [[ $(set -o | grep multiline) = *"multiline"* ]]; then
         set +o multiline
     fi
 }
@@ -28,30 +20,27 @@ _ls_colors(){
         fi
     fi
 }
-_ext_ascii()
+_blink()
 {
-    tput as 2> /dev/null
-    if [[ $? == 0 ]]; then
-        printf "$1"
-        tput ae
-    fi
+    printf "\033[5m"
 }
 custom_color()
 {
         export "$1"="$2"
-        cfg[$2]="$(tput $cap_setfg "$2" "$2" "$2")"
-        cbg[$2]="$(tput $cap_setbg "$2" "$2" "$2")"
+        cfg[$2]="$(printf '\033[38;5;%dm' "$2")"
+        cbg[$2]="$(printf '\033[48;5;%dm' "$2")"
+
 }
 load_colors()
 {
         export black=0 red=1 green=2 brown=3 blue=4 magenta=5 cyan=6 white=7 RESET
         RESET="$(printf '\033[0;10m')"
-        BOLD="$(tput bold)"
+        BOLD="$(printf '\033[1m')"
         integer i=0
         while (( i < 8 ))
         do 
-                fg[$i]="$(tput $cap_setfg "$i" "$i" "$i")"
-                bg[$i]="$(tput $cap_setbg "$i" "$i" "$i")"
+                fg[$i]="$(printf '\033[3%dm' "$i")"
+                bg[$i]="$(printf '\033[4%dm' "$i")"
                 (( i=i+1 ))
         done
 }
