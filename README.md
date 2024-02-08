@@ -9,7 +9,6 @@ Something like plugin manager for kornshell
 * git (avoid apple crappy one, install one from nix or brew[^1])
 * ksh93 ([Best option](https://github.com/ksh93/ksh)), pdksh or mksh(with limitations[^2]).
 * printf built-in to shell, or as external program
-* tput(should be built-in as well[^3])
 
 ## Tested OSes
 
@@ -33,7 +32,7 @@ Something like plugin manager for kornshell
 
 3. Only [ksh93u+m](https://github.com/ksh93/ksh) supports autocd, so note that.
 
-4. Some systems may require setting `export ENV=$HOME/.kshrc`[^4] in ~/.profile or /etc/profile(don't forget to reboot).
+4. Some systems may require setting `export ENV=$HOME/.kshrc`[^3] in ~/.profile or /etc/profile(don't forget to reboot).
 
 Also mksh use .mkshrc, so you either rename .kshrc to .mkshrc, or use step above
 
@@ -77,6 +76,4 @@ Type: `korn rm` or `korn remove`
 
 [^2]: As I tested it on NetBSD, there were problems with prompt loading if there were too many lines in PS1 variable. It cannot be fixed from this level most likely. 
 
-[^3]: If it's not,(like on termux on android) try installing `coreutils`.
-
-[^4]: You can set any path(and copy .kshrc there), for example i have it under `export ENV="$HOME/.config/ksh/rc"`
+[^3]: You can set any path(and copy .kshrc there), for example i have it under `export ENV="$HOME/.config/ksh/rc"`

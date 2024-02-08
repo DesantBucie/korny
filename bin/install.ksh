@@ -16,11 +16,10 @@ do
 done
 }
 requirements() {
-! { type ksh || type ksh93; } && echo "No Korn Shell installed" && exit 127
+! { type ksh || type ksh93 || type oksh || type mksh; } && echo "No Korn Shell installed" && exit 127
 ! type sed && echo "No sed installed" && exit 127
 ! type git && echo "Script needs git to clone repository" && exit 127
 ! type printf && echo "Printf is needed" && exit 127
-! type tput && echo "No tput detected" && exit 127
 }
 preinstall() {
 [[ -f ~/.kshrc ]] && mv ~/.kshrc ~/.kshrc_bak && echo "You have .kshrc in your, home, renaming it to .kshrc_bak, remember to copy your data to new .kshrc"

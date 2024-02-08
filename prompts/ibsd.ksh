@@ -6,7 +6,7 @@ custom_color c_red 196
 custom_color c_blue 27
 custom_color c_green 40
 PLUG_WARN='Load android plugin in order to use this prompt'
-#tput bold prints bold characters, it's stopped however by $RESET
+#bold prints bold characters, it's stopped however by $RESET
 PS1='$BOLD${cfg[light_brown]}[$(_print_short_pwd)]$RESET '
 PS1="$PS1"'${cfg[c_red]}$(_git_prompt)$RESET'
 PS1="$PS1"'${cfg[c_green]}$(_adb_rdy)$RESET'
