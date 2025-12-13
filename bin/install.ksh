@@ -51,6 +51,7 @@ fi
 }
 postinstall() {
 echo "If something wouldn't work, check docs/TROUBLESHOOTING.md, if you don't find your answer don't be afraid to make github issue" 
+echo "To see your new prompt, close and open the terminal window"
 }
 
 requirements

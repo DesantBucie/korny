@@ -28,7 +28,7 @@ Something like plugin manager for kornshell
 
    * `chsh -s <PATH TO KSH>`
 
-2. Run: `ksh -c "$(curl -fsSL https://gitlab.com/DesantBucie/korny/-/master/bin/install.ksh)"`
+2. Run: `ksh -c "$(curl -fsSL https://gitlab.com/DesantBucie/korny/-/raw/master/bin/install.ksh)"`
 
 3. Only [ksh93u+m](https://github.com/ksh93/ksh) supports autocd, so note that.
 
