@@ -34,7 +34,7 @@ install() {
 echo "install"
 cd "$TARGET_FOLDER" || exit 127
 if [[ "$(printf '%s\n' "$GIT_REQU" "$GIT_VERS" | sort -V | sed 1q)" == "$GIT_REQU" ]]; then
-    git clone --filter=blob:none --sparse https://github.com/DesantBucie/korny
+    git clone --filter=blob:none --sparse https://gitlab.com/DesantBucie/korny
     cd "$KORNY_FOLDER" || exit 127
     mv .kshrc "$HOME"
     git sparse-checkout add plugs/ bin/ prompts/
@@ -46,7 +46,7 @@ if [[ "$(printf '%s\n' "$GIT_REQU" "$GIT_VERS" | sort -V | sed 1q)" == "$GIT_REQ
     [[ $answer == 'Y' || $answer == 'y' ]] && git sparse-checkout add completion/
 else
     echo "Partial cloning not supported, consider updating git next time"
-    git clone https://github.com/DesantBucie/korny
+    git clone https://gitlab.com/DesantBucie/korny
 fi
 }
 postinstall() {
