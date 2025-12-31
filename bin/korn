@@ -6,6 +6,9 @@ scribble(){
     echo "Type this: export MallocScribble=1"
 }
 update(){
+    printf "${bg[red]}PROJECT MOVED TO codeberg.org/bucik/korny$RESET\n"
+    printf "${bg[red]}Please consider reinstalling korny.$RESET\n"
+
     curr_pwd=$PWD
     if [[ $KORNY_FOLDER != "" ]]; then
         cd "$KORNY_FOLDER"
